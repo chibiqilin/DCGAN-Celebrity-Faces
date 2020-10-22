@@ -18,9 +18,9 @@ import torch
 import torch.nn as nn
 import torch.nn.parallel
 import torch.backends.cudnn as cudnn
-import torch.optim as optimize
+import torch.optim as optim
 import torch.utils.data
-import torchvision.datasets as datasets
+import torchvision.datasets as dataset
 import torchvision.transforms as transforms
 import torchvision.utils as vutils
 import numpy as np
@@ -69,7 +69,7 @@ ngpu = 0
 ########
 
 # Dataset
-dataset = dset.ImageFolder(root = dataroot,
+dataset = dataset.ImageFolder(root = dataroot,
     transform = transforms.Compose([
         transforms.Resize(image_size),
         transforms.CenterCrop(image_size),
@@ -83,7 +83,7 @@ dataloader = torch.utils.data.DataLoader(
     dataset,
     batch_size = batch_size,
     shuffle = True,
-    num_workers = workers)
+    num_workers = workers,
 )
 
 # Assign GPU/CPU to use
