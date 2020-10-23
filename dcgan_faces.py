@@ -29,8 +29,8 @@ import matplotlib.animation as animation
 from IPython.display import HTML
 
 # Seed
-manualSeed = 999
-#manualSeed = random.randint(1, 10000);
+manualSeed = 411
+manualSeed = random.randint(1, 10000);
 print("Random Seed: ", manualSeed)
 random.seed(manualSeed)
 torch.manual_seed(manualSeed)
@@ -56,7 +56,7 @@ ngf = 64
 # Depth of feature maps in discriminator
 ndf = 64
 # Training epochs
-num_epochs = 5
+num_epochs = 3
 # Learning rate
 lr = 0.0002
 # beta1 hyperparameter for Adam optimizer Default = 0.5
